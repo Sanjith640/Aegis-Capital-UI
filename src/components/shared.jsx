@@ -30,7 +30,6 @@ export function Logo({ size = 'md' }) {
   );
 }
 
-// ── Public Navbar ─────────────────────────────────────────────────
 export function PublicNavbar() {
   return (
     <nav style={{
@@ -40,10 +39,6 @@ export function PublicNavbar() {
       justifyContent: 'space-between', position: 'sticky', top: 0, zIndex: 100,
     }}>
       <Logo />
-      <div style={{ display: 'flex', gap: 12 }}>
-        <Link to="/login" className="btn btn-ghost btn-sm">Sign In</Link>
-        <Link to="/register" className="btn btn-primary btn-sm">Open Account</Link>
-      </div>
     </nav>
   );
 }
@@ -52,10 +47,8 @@ export function PublicNavbar() {
 const customerNav = [
   { path: '/dashboard', icon: '⊞', label: 'Dashboard' },
   { path: '/accounts', icon: '◈', label: 'Accounts' },
-  { path: '/deposit', icon: '↓', label: 'Deposit' },
   { path: '/withdraw', icon: '↑', label: 'Withdraw' },
   { path: '/transfer', icon: '⇄', label: 'Transfer' },
-  { path: '/history', icon: '≡', label: 'History' },
   { path: '/audit', icon: '◉', label: 'Audit' },
   { path: '/profile', icon: '◎', label: 'Profile' },
 ];
@@ -122,6 +115,7 @@ const adminNav = [
   { path: '/admin/dashboard', icon: '⊞', label: 'Dashboard' },
   { path: '/admin/officers', icon: '◈', label: 'Compliance Officers' },
   { path: '/admin/users', icon: '◉', label: 'All Users' },
+  { path: '/admin/deposit', icon: '↓', label: 'Deposit' },
   { path: '/admin/audit', icon: '≡', label: 'Audit Viewer' },
 ];
 
@@ -181,6 +175,7 @@ export function AdminSidebar() {
 const complianceNav = [
   { path: '/compliance/dashboard', icon: '⊞', label: 'Dashboard' },
   { path: '/compliance/users', icon: '◉', label: 'Users' },
+  { path: '/compliance/deposit', icon: '↓', label: 'Deposit' },
   { path: '/compliance/audit', icon: '≡', label: 'Audit Viewer' },
 ];
 
